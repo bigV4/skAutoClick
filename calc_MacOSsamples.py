@@ -48,15 +48,18 @@ def find_and_click(image):
     # move1(3)
     try:
         x, y = pyautogui.locateCenterOnScreen(image, confidence=0.9)
+        print(pyautogui.locateOnScreen(image))
+        (x1, y1) = pyautogui.locateOnScreen(image)[0:2]
         print(image, x, y)
+        print(image, x1, y1)
         pyautogui.moveTo(x/2, y/2, duration=0.25)
-        pyautogui.moveTo(x, y, duration=0.25)
+        #pyautogui.moveTo(x, y, duration=0.25)
         time.sleep(0.25)
-        pyautogui.moveTo(x/2, y/2, duration=0.25)
-        pyautogui.moveTo(x, y, duration=0.25)
-        pyautogui.click(x/2, y/2)
+        pyautogui.moveTo(x1/2+1, y1/2+1, duration=0.25)
+        #pyautogui.moveTo(x, y, duration=0.25)
+        pyautogui.click(x1/2+1, y1/2+1)
     except Exception as e:
-        print("image", e)
+        print("image", image, e)
 
 
 # 执行5*8=

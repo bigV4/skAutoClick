@@ -4,4 +4,5 @@ log/*           //忽略log下的所有文件
 log/*.log       //忽略log目录下的.log文件
 temp/*           //忽略temp下的所有文件
 dest/*       //忽略dest目录下的所有文件
-.venv/*       //忽略env目录下的所有文件
+.venv/*       //忽略.venv目录下的所有文件
+venv/*       //忽略venv目录下的所有文件
