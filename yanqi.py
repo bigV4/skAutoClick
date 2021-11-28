@@ -21,6 +21,7 @@ time.sleep(3)
 xiangqing = 'xiangqing.png'  # xiangqing
 yanqitu = 'yanqi.png'  # yanqi
 yizhou = 'yizhou.png'  # yizhou
+sizhou = 'sizhou.png'  # sizhou
 erzhou = 'erzhou.png'  # 等于号
 queren = 'queren.png'
 xiazai = 'xiazai.png'
@@ -66,7 +67,7 @@ def find_and_click(image):
         print("image", image, e)
 
 
-def yanqi(xlh):
+def yanqi(xlh, shichang):
     os.system("open 'https://lm.dev-rs.com/license_admin/license/?search=%s'" % xlh)
     for i in range(0, 60):
         if pyautogui.locateCenterOnScreen("jiemian.png", confidence=0.9):
@@ -88,7 +89,7 @@ def yanqi(xlh):
     time.sleep(0.25)
     find_and_click(yizhou)
     time.sleep(0.25)
-    find_and_click(erzhou)
+    find_and_click(shichang)
     time.sleep(0.25)
     find_and_click(queren)
     time.sleep(0.25)
@@ -99,5 +100,19 @@ def yanqi(xlh):
     find_and_click(cunchu)
 
 
-# 执行5*8=
-yanqi("1PX4BKFF1HA")
+# yanqi(xlh="1PX4BKFF1HA",shichang=erzhou)
+lll = ["1HCE49SQFTR",
+       "1LBM9CVH9K5",
+       "1LBYJ5MTUP1",
+       "1LDE1OKUY05",
+       "1LCAVFP76N8",
+       "1FCRVN4NJGF",
+       "W0Y39U68FJ",
+       "1GW3OBXCG49",
+       "17KE3FTKGDH",
+       "1GXHSN8Z7OA",
+       "Y31FNY0APU",
+       "Y55UGV2CND",
+       "1PX4BKFF1HA"]
+for i in lll:
+    yanqi(xlh=i, shichang=sizhou)
